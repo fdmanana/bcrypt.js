@@ -1,5 +1,5 @@
 RM = rm -f
-JSMIN=python jsmin.py
+JSMIN = python jsmin.py
 
 all: clean bcrypt-min.js
 
