@@ -50,9 +50,6 @@ return r;}
 function get_copy(obj){if(obj instanceof Array){var copy=[];for(var i=0;i<obj.length;i++){copy[i]=arguments.callee(obj[i]);}
 return copy;}else if(typeof obj=="object"){var copy={};for(var p in obj){copy[p]=arguments.callee(obj[p]);}
 return copy;}else{return obj;}}
-function to_hex(value,byte_len){var str="";function hex_char(val){if(val>=0&&val<=9){return String.fromCharCode("0".charCodeAt(0)+val);}else if(val>=10&&val<=15){return String.fromCharCode("A".charCodeAt(0)+val-10);}else{return"";}}
-for(var i=0;i<byte_len;i++){str=hex_char(value&0x0f)+str;str=hex_char((value&0xf0)>>4)+str;value=value>>8;}
-return str;}
 return{gen_salt:function(log_rounds,input){log_rounds=log_rounds||DEFAULT_LOG_ROUNDS;if(log_rounds<4||log_rounds>31){throw{error:"log_rounds must be in the interval [4..31]"};}
 if(typeof input==="undefined"){input="";for(var i=0;i<16;i++){input+=String.fromCharCode(Math.floor(Math.random()*256));}}
 if((typeof input!=="string")||(input.length!=16)){throw{error:"input must be a string of bytes with length 16"};}

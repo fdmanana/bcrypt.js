@@ -605,28 +605,27 @@ var bcrypt = (function() {
     /**
      * Functions for debugging purposes only. Safe to uncomment for production.
      */
-     function to_hex(value, byte_len) {
-         var str = "";
-
-         function hex_char(val) {
-             if (val >= 0 && val <= 9) {
-                 return String.fromCharCode("0".charCodeAt(0) + val);
-             } else if (val >= 10 && val <= 15) {
-                 return String.fromCharCode("A".charCodeAt(0) + val - 10);
-             } else {
-                 return "";
-             }
-         }
- 
-         for (var i = 0; i < byte_len; i++) {
-             str = hex_char(value & 0x0f) + str;
-             str = hex_char((value & 0xf0) >> 4) + str;
-             value = value >> 8;
-         }
-
-         return str;
-     }
-
+//      function to_hex(value, byte_len) {
+//          var str = "";
+//
+//          function hex_char(val) {
+//              if (val >= 0 && val <= 9) {
+//                  return String.fromCharCode("0".charCodeAt(0) + val);
+//              } else if (val >= 10 && val <= 15) {
+//                  return String.fromCharCode("A".charCodeAt(0) + val - 10);
+//              } else {
+//                  return "";
+//              }
+//          }
+//
+//          for (var i = 0; i < byte_len; i++) {
+//              str = hex_char(value & 0x0f) + str;
+//              str = hex_char((value & 0xf0) >> 4) + str;
+//              value = value >> 8;
+//          }
+//
+//          return str;
+//      }
 
     /**
      * Public API.
