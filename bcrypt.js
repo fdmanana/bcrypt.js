@@ -676,8 +676,20 @@ var bcrypt = (function() {
         },
 
         /**
+         * Decodes a UTF-8 string into its corresponding byte sequence.
+         *
+         * @return A string encoding the byte sequence representing the
+         *         given UTF-8 encoded string.
+         */
+        decode_utf8_string: function(utf8_string) {
+            return unescape(encodeURIComponent(utf8_string));
+        },
+
+        /**
          * @param password Mandatory.
          *                 The password (as a byte string) to hash with the bcrypt method.
+         *                 To get the byte sequence encoding a UTF-8 string
+         *                 @see decode_utf8_string(utf8_string).
          * 
          * @param salt Optional.
          *             The salt to use for hashing the password.
