@@ -779,7 +779,7 @@ var bcrypt = (function() {
 
             var tmp1, tmp2, tmp3, tmp4;
 
-	        do {
+            do {
                 data.ctx.P[0] ^= data.exp_key[0];
                 data.ctx.P[1] ^= data.exp_key[1];
                 data.ctx.P[2] ^= data.exp_key[2];
