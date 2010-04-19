@@ -14,9 +14,9 @@ Designer <solar at openwall.com>
 # Links
 
 * [A Future-Adaptable Password Scheme, Niels Provos and David
-  Mazières, The OpenBSD Project][http://www.usenix.org/events/usenix99/provos.html]
+  Mazières, The OpenBSD Project]:http://www.usenix.org/events/usenix99/provos.html
 
-* [C bcrypt implementation by Solar Designer][http://www.openwall.com/crypt/]
+* [C bcrypt implementation by Solar Designer]:http://www.openwall.com/crypt/
 
 
 
