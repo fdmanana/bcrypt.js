@@ -692,7 +692,7 @@ var bcrypt = (function() {
                 salt = this.gen_salt(5);
             }
 
-            if ((typeof salt !== "string") || (salt.length != 29)) {
+            if ((typeof salt !== "string") || (salt.length !== 29)) {
                 throw {error: "salt must be a byte string with a length of 29 bytes"};
             }
 
